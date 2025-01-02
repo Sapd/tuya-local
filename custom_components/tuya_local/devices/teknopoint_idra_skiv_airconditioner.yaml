@@ -1,7 +1,7 @@
 name: Air conditioner
 products:
   - id: f3goccgfj6qino4c
-    name: Idra Skiv Air Conditioner
+    name: Tekno Point Idra Skiv Air Conditioner
 primary_entity:
   entity: climate
   translation_key: aircon_extra
@@ -287,6 +287,60 @@ secondary_entities:
       - id: 20
         type: bitfield
         name: fault_code
+      - id: 20
+        type: bitfield
+        name: Fault Description
+        mapping:
+          - dps_val: 0
+            value: ok
+          - dps_val: 1
+            value: Clean filter (CL)
+          - dps_val: 2
+            value: High Pressure Protection / Flow Switch Error (E4)
+          - dps_val: 4
+            value: Low Pressure Protection (E5)
+          - dps_val: 8
+            value: Compressor Phase Error (H6)
+          - dps_val: 16
+            value: Fan Error - Outdoor Unit (H9)
+          - dps_val: 32
+            value: Auxiliary Heating Error (HE)
+          - dps_val: 64
+            value: Jumper Config Error - Indoor Unit (L0)
+          - dps_val: 128
+            value: Zero Crossing Circuit Error (L1)
+          - dps_val: 256
+            value: Fan Error - Indoor Unit (L2)
+          - dps_val: 512
+            value: Inside to Outside Unit Communication Error (L3)
+          - dps_val: 1024
+            value: Outside to Inside Unit Communication Error (L6)
+          - dps_val: 2048
+            value: Inside Unit and Wired Control Communication Error (L7)
+          - dps_val: 4096
+            value: Condensate Water Pump Error (L8)
+          - dps_val: 8192
+            value: Condensate tray full - Water Overflow Protection (L9)
+          - dps_val: 16384
+            value: Error (LA)
+          - dps_val: 32768
+            value: Error (Ld)
+          - dps_val: 65536
+            value: EEPROM Malfunction - Outside Unit (P0)
+          - dps_val: 131072
+            value: Ignition failed / Circuit Change Error (P1)
+          - dps_val: 262144
+            value: Abnormal AC Current - Outside Unit (P6)
+          - dps_val: 524288
+            value: Abnormal Current PFC - Outside Unit (P8)
+          - dps_val: 1048576
+            value: Outside and inside unit not compatible (PA)
+          - dps_val: 2097152
+            value: Conflict between indoor units - Not all on either heat or cool (PC)
+          - dps_val: 4194304
+            value: Jumper Config Error - Outside Unit (Pd)
+          - dps_val: 8388608
+            value: Error (PE)
       - id: 113
         type: bitfield
         name: fault_code2
